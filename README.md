@@ -1,2 +1,2 @@
-# ReID-in-Real-Haze--ECCV2022
-ReID in Real Haze: Learning Robust Vehicle Re-identification in Real Hazy Scenes using Semi-supervised Learning --ECCV2022
+# RVSL--ECCV2022
+RVSL: Robust Vehicle Similarity Learning in Real Hazy Scenes Based on Semi-supervised Learning -- ECCV2022
