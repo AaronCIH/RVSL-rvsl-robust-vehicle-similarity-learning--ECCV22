@@ -1,7 +1,7 @@
 # FVRID dataset for training and testing
 
 ## Examples of the dataset
-![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/Datasets/Dataset.png)
+![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/blob/master/Datasets/Dataset.png)
 
 ## Pipeline of generation
 ### 1. Download Public Dataset
