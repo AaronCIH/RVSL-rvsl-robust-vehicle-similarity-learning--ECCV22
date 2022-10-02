@@ -31,7 +31,7 @@ Page: http://www.nlpr.ia.ac.cn/iva/homepage/jqwang/Vehicle1M.htm <br>
 Haiyun Guo, Chaoyang Zhao, Zhiwei Liu, Jinqiao Wang, Hanqing Lu: Learning coarse-to-fine structured feature embedding for vehicle re-identification. AAAI 2018.
 ```
 ### 2. Place the datasets to the corrseponding folders.
-### 3. Create FVRID and enter into preposcessing.
+### 3. Follow "./Datasets/Preprocessing" to create FVRID dataset.
 
 ## Structure of the dataset
 * Datasets
