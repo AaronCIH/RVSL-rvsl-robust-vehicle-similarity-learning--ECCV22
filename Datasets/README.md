@@ -1,7 +1,7 @@
 # FVRID dataset for training and testing
 
 ## Examples of the dataset
-![image](https://github.com/Cihsaing/SJDL-Foggy-Vehicle-Re-Identification--AAAI2022/blob/master/Datasets/Dataset.png)
+![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/Datasets/Dataset.png)
 
 ## Pipeline of generation
 ### 1. Download Public Dataset
