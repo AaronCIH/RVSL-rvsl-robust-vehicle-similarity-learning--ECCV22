@@ -37,6 +37,13 @@ Haiyun Guo, Chaoyang Zhao, Zhiwei Liu, Jinqiao Wang, Hanqing Lu: Learning coarse
 * Datasets
 ```bash
 {
+  "FVRID_clear":[
+        { 
+            "train_clear": Real clear training data, eg. "30000_c059_115150_0.jpg"  ...
+            "query_clear": Real clear query data, eg. "30156_c139_331359_0.jpg"  ...
+            "gallery_clear": Real clear gallery data, eg. "30156_c139_331353_0.jpg"  ...
+        }
+   ],
   "FVRID_real":[
         { 
             "train_foggy": Real world training data, eg. "20000_c014_007925_0.jpg"  ...
