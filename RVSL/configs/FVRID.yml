@@ -1,0 +1,81 @@
+MODE:
+  STAGE: 'STAGE1'
+  SEED: 1229
+
+MODEL:
+  NAME: "resnet50"
+  PRETRAIN_PATH: ""
+  LAST_STRIDE: 1
+  PRETRAIN_PATH_reid: ""
+  PRETRAIN_PATH_res: ""
+  RVSL_BASE_W: 1.0
+  RVSL_REST_W: 1.0
+  LABEL_SMOOTH: False
+  TENSORBOARDX: False
+
+
+INPUT:
+  SIZE_TRAIN: [384, 384]
+  SIZE_TEST: [384, 384]
+  PIXEL_MEAN: [0.5, 0.5, 0.5]
+  PIXEL_STD: [0.5, 0.5, 0.5]
+  PROB: 0.5 # random horizontal flip
+  RE_PROB: 0.5 # random erasing 
+  PADDING: 0
+
+DATASETS:
+  NAMES: 'FVRID'
+  DATA_PATH: '../Datasets/'
+
+  SYN_TRAIN_CLEAR_PATH: 'FVRID_syn/train_clear'
+  SYN_TRAIN_FOGGY_PATH: 'FVRID_syn/train_foggy'  
+  SYN_QUERY_CLEAR_PATH: 'FVRID_syn/query_clear'
+  SYN_QUERY_FOGGY_PATH: 'FVRID_syn/query_foggy'
+  SYN_GALLERY_CLEAR_PATH: 'FVRID_syn/gallery_clear'
+  SYN_GALLERY_FOGGY_PATH: 'FVRID_syn/gallery_foggy'
+
+  REAL_TRAIN_CLEAR_PATH: 'FVRID_clear/train_clear'
+  REAL_QUERY_CLEAR_PATH: 'FVRID_clear/query_clear'
+  REAL_GALLERY_CLEAR_PATH: 'FVRID_clear/gallery_clear'
+  
+  REAL_TRAIN_FOGGY_PATH: 'FVRID_real/train_foggy'  
+  REAL_QUERY_FOGGY_PATH: 'FVRID_real/query_foggy'
+  REAL_GALLERY_FOGGY_PATH: 'FVRID_real/gallery_foggy'
+
+DATALOADER:
+  SAMPLER: 'RVSL'
+  NUM_INSTANCE: 6
+  NUM_WORKERS: 1
+  NORMALZIE: False
+
+SOLVER:
+  OPTIMIZER_NAME: 'Adam'
+  MAX_EPOCHS: 200
+  BASE_LR: 0.0001
+  BIAS_LR_FACTOR: 1
+  WEIGHT_DECAY: 0.0005
+  WEIGHT_DECAY_BIAS: 0.0005
+  IMS_PER_BATCH: 36
+  FP16: False
+
+  STEPS: [20, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255]
+  GAMMA: 0.6
+
+  WARMUP_FACTOR: 0.01
+  WARMUP_ITERS: 200
+  WARMUP_METHOD: 'linear'
+
+  CHECKPOINT_PERIOD: 5
+  LOG_PERIOD: 100
+  EVAL_PERIOD: 1
+
+TEST:
+  IMS_PER_BATCH: 36
+  DEBUG: True
+  WEIGHT: "path"
+  VIS: False
+  MULTI_GPU: False
+  DATA: 'REAL_FOGGY'
+
+OUTPUT_DIR: "/output/RVSL_Stage1/"
+
