@@ -43,7 +43,7 @@ Devices
 
 ## 2. Data Preparation
 Since the policy of Veriwild and Vehicle1M, we can only provide the codes to synthesize the foggy data and the index of the real-world foggy data. Please follow the steps to generate the data:
-See [Data Preparation](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Datasets).
+See [[Data Preparation]](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Datasets).
 
 ## 3. Train RVSL
 Run following command to train the complete RVSL model
