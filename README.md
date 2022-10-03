@@ -54,14 +54,14 @@ bash train.sh
 
 You can also train the model seperately.
 ```
-CUDA_VISIBLE_DEVICES=<gpu_id> python <stageX_trainer.py> -c configs/FVRID.yml MODE.STAGE <"STAGEX"> MODEL.PRETRAIN_PATH <"PreTrained Weights"> OUTPUT_DIR <"./output/RVSL_StageX/">
+CUDA_VISIBLE_DEVICES=<gpu_id> python <TRAINER> -c configs/FVRID.yml MODE.STAGE <STAGE> MODEL.PRETRAIN_PATH <PRETRAIN> OUTPUT_DIR <OUTPUT_PATH>
 ```
 where the ```<gpu_id>``` is assigned gpu number. <br>
-where the ```<stageX_trainer.py>``` is the trainer file. <br>
-where the ```<"STAGEX">``` is the training stage.<br>
+where the ```<TRAINER>``` is the trainer file. {stage1_trainer.py, stage2_trainer.py, stage3_trainer.py} <br>
+where the ```<STAGE>``` is the training stage. <br>
 -> ("STAGE1":supervised training stage, "STAGE2":unsupervised real clear training stage, "STAGE3":unsupervised real hazy training stage) <br>
-where the ```<"PreTrained Weights">``` is the pretrained weights path. <br>
-where the ```<"./output/RVSL_StageX/">``` is the output path. <br>
+where the ```<PRETRAIN>``` is the pretrained weights path. <br>
+where the ```<OUTPUT_PATH>``` is the output paths. <br>
 
 ### Common problem
 1. "cuda: out of memory": the original model is trained on multi-gpu, please rewrite the trainer code to suit for parallel training.
