@@ -2,13 +2,13 @@
 This is official implentation of the paper:
 "RVSL: Robust Vehicle Similarity Learning in Real Hazy Scenes Based on Semi-supervised Learning"
 
-## Abstract:
+## 1. Abstract:
 Recently, vehicle similarity learning, also called re-identification (ReID), has attracted significant attention in computer vision. Several algorithms have been developed and obtained considerable success. However, most existing methods have unpleasant performance in the hazy scenario due to poor visibility. Though some strategies are possible to resolve this problem, they still have room to be improved due to the limited performance in real-world scenarios and the lack of real-world clear ground truth. Thus, to resolve this problem, inspired by CycleGAN, we construct a training paradigm called RVSL which integrates ReID and domain transformation techniques. The network is trained on semi-supervised fashion and does not require to employ the ID labels and the corresponding clear ground truths to learn hazy vehicle ReID mission in the real-world haze scenes. To further constrain the unsupervised learning process effectively, several losses are developed. Experimental results on synthetic and real-world datasets indicate that the proposed method can achieve state-of-the-art performance on hazy vehicle ReID problems. It is worth mentioning that although the proposed method is trained without real-world label information, it can achieve competitive performance compared to existing supervised methods trained on complete label information.
 
 You can also refer our previous works on other defoggy vehicle reid applications! <br />
 **SJDL-Vehicle: Semi-supervised Joint Defogging Learning for Foggy Vehicle Re-identification--AAAI2022.** [[Link]](https://github.com/Cihsaing/SJDL-Foggy-Vehicle-Re-Identification--AAAI2022)
 
-## Network Architecture
+## 2. Network Architecture
 * Inspired by the cycle consistency, proposed RVSL framework:
 Learning knowledge of transformation of two scenarios through synthetic data, and then enhance the model’s robustness in real-world scenes in an unsupervised manner.
 ![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/raw/master/Fig/cycle_consistency.png)
@@ -17,11 +17,11 @@ Learning knowledge of transformation of two scenarios through synthetic data, an
 RVSL based on semi-supervised learning and domain transformation is proposed to learn hazy vehicle ReID without the albels or clear ground truths of real-world data.
 ![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/raw/master/Fig/architecture.png)
 
-## Dataset 
+## 3. Dataset 
 Both synthetic data and real-world data are adopted in this paper, and this data is constructed by myself, the detail can see [Dataset](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Datasets):
 ![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/raw/master/Fig/dataset.png)
 
-## Result
+## 4. Result
 * For synthetic hazy dataset.
 ![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/raw/master/Fig/Syn_SOTA.png)
 
