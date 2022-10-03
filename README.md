@@ -11,7 +11,7 @@ SJDL-Vehicle: Semi-supervised Joint Defogging Learning for Foggy Vehicle Re-iden
 ## Network Architecture
 * Inspired by the cycle consistency, proposed RVSL framework:
 Learning knowledge of transformation of two scenarios through synthetic data, and then enhance the model’s robustness in real-world scenes in an unsupervised manner.
-![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Fig/cycle_consistency.png)
+![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/raw/master/Fig/cycle_consistency.png)
 
 * Robust Vehicle Similarity Learning
 RVSL based on semi-supervised learning and domain transformation is proposed to learn hazy vehicle ReID without the albels or clear ground truths of real-world data.
