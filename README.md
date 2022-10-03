@@ -46,7 +46,7 @@ Since the policy of Veriwild and Vehicle1M, we can only provide the codes to syn
 See [Data Preparation](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Datasets).
 
 ## 3. Train RVSL
-Run following command to train the RVSL model
+Run following command to train the complete RVSL model
 ```
 cd RVSL/
 bash train.sh
@@ -64,26 +64,34 @@ where the ```<"PreTrained Weights">``` is the pretrained weights path. <br>
 where the ```<"./output/RVSL_StageX/">``` is the output path. <br>
 
 ### Common problem
-
+1. "cuda: out of memory": the original model is trained on multi-gpu, please rewrite the trainer code to suit for parallel training.
+2. "cuda: out of memory": if you only have a gpu, please reduce the config "DATALOADER.NUM_INSTANCE" and "SOLVER.IMS_PER_BATCH", e.g. "SOLVER.IMS_PER_BATCH" must to be multiply of NUM_INSTANCE.
+3. If you encounter an amp conflict, there are two possibilities: torch version problem and the device must have support.
+   If your device not support, please keep the ```"configs/FVRID_syn.yml": SOLVER.FP16 = False```.
 
 ## Pretrained Models
+We provide the pretrained SJDL, training on FVRID for your convinient. You can download it from the following link: 
+[https://drive.google.com/file/d/1WhsvYQP-qg1R-BcpH5lonjxh4DYp2ouv/view?usp=sharing](https://drive.google.com/drive/folders/1d8Ggtc5GHA7L5Mrv8-teyTPA4TO3A8MA?usp=sharing)
 
 ## Testing
+Run following command to test the complete result.
+```
+cd RVSL/
+bash test.sh
 ```
 
+You can also train the model seperately.
 ```
-where the ```<Configs>``` is the testing configs file. <br>
+CUDA_VISIBLE_DEVICES=<gpu_id> python inference.py -t -c configs/FVRID.yml TEST.DATA <Data> MODE.STAGE "STAGE1" TEST.WEIGHT <PTH_PATH> OUTPUT_DIR <OUTPUT_PATH> 
+```
+where the ```<gpu_id>``` is assigned gpu number. <br>
+where the ```<Data>``` is used to select testing set. {"SYN", "REAL_CLEAR", "REAL_FOGGY"} <br>
 where the ```<PTH_PATH>``` is the test weight. <br>
 where the ```<OUTPUT_PATH>``` is the output paths. <br>
 
 The pre-trained model can be downloaded from Link: <br>
-. <br>
-and you can put it at the dir ```''```
-
-Examples
-```
-
-```
+https://drive.google.com/file/d/1WhsvYQP-qg1R-BcpH5lonjxh4DYp2ouv/view?usp=sharing. <br>
+and you can put it at the dir ```'./RVSL/output/'```
 
 # Citations
 Please cite this paper in your publications if it is helpful for your tasks:    
