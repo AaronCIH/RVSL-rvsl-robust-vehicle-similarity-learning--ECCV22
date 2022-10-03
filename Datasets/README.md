@@ -31,7 +31,7 @@ Page: http://www.nlpr.ia.ac.cn/iva/homepage/jqwang/Vehicle1M.htm <br>
 Haiyun Guo, Chaoyang Zhao, Zhiwei Liu, Jinqiao Wang, Hanqing Lu: Learning coarse-to-fine structured feature embedding for vehicle re-identification. AAAI 2018.
 ```
 ### 2. Place the datasets to the corrseponding folders.
-### 3. Follow "./Datasets/Preprocessing" to create FVRID dataset: https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Datasets/Preprocessing.
+### 3. Follow "./Datasets/Preprocessing"(https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Datasets/Preprocessing) to create FVRID dataset.
 
 ## Structure of the dataset
 * Datasets
