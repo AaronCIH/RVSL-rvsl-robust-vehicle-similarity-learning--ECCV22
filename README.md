@@ -37,9 +37,9 @@ To implement our method you need:
 > 4. yacs
 > 5. tqdm
 
-* Devices
-The network is trained on an Nvidia Tesla V100 Multi-GPUs for 3 days, and the proposed code is based on single gpu which needs bigger gpu memory.
-**If you encounter the problem "out of the memory", please transfer the training code to multi-gpus or low the config "DATALOADER.NUM_INSTANCE" and "SOLVER.IMS_PER_BATCH"**
+Devices
+>The network is trained on an Nvidia Tesla V100 Multi-GPUs for 3 days, and the proposed code is based on single gpu which needs bigger gpu memory.
+>**If you encounter the problem "out of the memory", please transfer the training code to multi-gpus or low the config "DATALOADER.NUM_INSTANCE" and "SOLVER.IMS_PER_BATCH"**
 
 ## 2. Data Preparation
 Since the policy of Veriwild and Vehicle1M, we can only provide the codes to synthesize the foggy data and the index of the real-world foggy data. Please follow the steps to generate the data:
