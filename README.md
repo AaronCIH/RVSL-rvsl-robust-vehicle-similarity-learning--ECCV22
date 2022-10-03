@@ -28,8 +28,8 @@ Both synthetic data and real-world data are adopted in this paper, and this data
 * For real-world hazy dataset.
 ![image](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/raw/master/Fig/Real_SOTA.png)
 
-
-# Setup and environment
+# Implement
+## 1. Setup and environment
 To implement our method you need:
 > 1. Python 3.10
 > 2. pytorch 1.8.0+
@@ -41,16 +41,26 @@ To implement our method you need:
 The network is trained on an Nvidia Tesla V100 Multi-GPUs for 3 days, and the proposed code is based on single gpu which needs bigger gpu memory.
 **If you encounter the problem "out of the memory", please transfer the training code to multi-gpus or low the config "DATALOADER.NUM_INSTANCE" and "SOLVER.IMS_PER_BATCH"**
 
-## Data Preparation
-Since the policy of Veri-1M, we can only provide the codes to synthesize the foggy data and the index of the real-world foggy data. Please follow the steps to generate the data:
+## 2. Data Preparation
+Since the policy of Veriwild and Vehicle1M, we can only provide the codes to synthesize the foggy data and the index of the real-world foggy data. Please follow the steps to generate the data:
 See [Data Preparation](https://github.com/Cihsaing/rvsl-robust-vehicle-similarity-learning--ECCV22/tree/master/Datasets).
 
-## Train RVSL
+## 3. Train RVSL
 Run following command to train the RVSL model
 ```
 cd RVSL/
-
+bash train.sh
 ```
+
+You can also train the model seperately.
+```
+CUDA_VISIBLE_DEVICES=<gpu_id> python <stageX_trainer.py> -c configs/FVRID.yml MODE.STAGE <"STAGEX"> MODEL.PRETRAIN_PATH <"PreTrained Weights"> OUTPUT_DIR <"./output/RVSL_StageX/">
+```
+where the ```<gpu_id>``` is assigned gpu number. <br>
+where the ```<stageX_trainer.py>``` is the trainer file. <br>
+where the ```<"STAGEX">``` is the training stage. ("STAGE1":supervised training stage, "STAGE2":unsupervised real clear training stage, "STAGE3":unsupervised real hazy training stage) <br>
+where the ```<"PreTrained Weights">``` is the pretrained weights path. <br>
+where the ```<"./output/RVSL_StageX/">``` is the output path. <br>
 
 ### Common problem
 
