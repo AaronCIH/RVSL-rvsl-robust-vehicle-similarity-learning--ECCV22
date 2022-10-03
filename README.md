@@ -5,8 +5,8 @@ This is official implentation of the paper:
 ## Abstract:
 Recently, vehicle similarity learning, also called re-identification (ReID), has attracted significant attention in computer vision. Several algorithms have been developed and obtained considerable success. However, most existing methods have unpleasant performance in the hazy scenario due to poor visibility. Though some strategies are possible to resolve this problem, they still have room to be improved due to the limited performance in real-world scenarios and the lack of real-world clear ground truth. Thus, to resolve this problem, inspired by CycleGAN, we construct a training paradigm called RVSL which integrates ReID and domain transformation techniques. The network is trained on semi-supervised fashion and does not require to employ the ID labels and the corresponding clear ground truths to learn hazy vehicle ReID mission in the real-world haze scenes. To further constrain the unsupervised learning process effectively, several losses are developed. Experimental results on synthetic and real-world datasets indicate that the proposed method can achieve state-of-the-art performance on hazy vehicle ReID problems. It is worth mentioning that although the proposed method is trained without real-world label information, it can achieve competitive performance compared to existing supervised methods trained on complete label information.
 
-You can also refer our previous works on other defoggy vehicle reid applications!
-SJDL-Vehicle: Semi-supervised Joint Defogging Learning for Foggy Vehicle Re-identification--AAAI2022. [[Link]](https://github.com/Cihsaing/SJDL-Foggy-Vehicle-Re-Identification--AAAI2022)
+You can also refer our previous works on other defoggy vehicle reid applications! <\br>
+\bSJDL-Vehicle: Semi-supervised Joint Defogging Learning for Foggy Vehicle Re-identification--AAAI2022. [[Link]](https://github.com/Cihsaing/SJDL-Foggy-Vehicle-Re-Identification--AAAI2022)
 
 ## Network Architecture
 * Inspired by the cycle consistency, proposed RVSL framework:
