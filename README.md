@@ -58,7 +58,8 @@ CUDA_VISIBLE_DEVICES=<gpu_id> python <stageX_trainer.py> -c configs/FVRID.yml MO
 ```
 where the ```<gpu_id>``` is assigned gpu number. <br>
 where the ```<stageX_trainer.py>``` is the trainer file. <br>
-where the ```<"STAGEX">``` is the training stage. ("STAGE1":supervised training stage, "STAGE2":unsupervised real clear training stage, "STAGE3":unsupervised real hazy training stage) <br>
+where the ```<"STAGEX">``` is the training stage.<br>
+-> ("STAGE1":supervised training stage, "STAGE2":unsupervised real clear training stage, "STAGE3":unsupervised real hazy training stage) <br>
 where the ```<"PreTrained Weights">``` is the pretrained weights path. <br>
 where the ```<"./output/RVSL_StageX/">``` is the output path. <br>
 
