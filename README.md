@@ -38,7 +38,7 @@ To implement our method you need:
 > 5. tqdm
 
 Devices
->The network is trained on an Nvidia Tesla V100 Multi-GPUs for 3 days, and the proposed code is based on single gpu which needs bigger gpu memory.
+>The network is trained on an Nvidia Tesla V100 Multi-GPUs for 3 days, and the proposed code is based on single gpu which needs bigger gpu memory. <br>
 >**If you encounter the problem "out of the memory", please transfer the training code to multi-gpus or low the config "DATALOADER.NUM_INSTANCE" and "SOLVER.IMS_PER_BATCH"**
 
 ## 2. Data Preparation
