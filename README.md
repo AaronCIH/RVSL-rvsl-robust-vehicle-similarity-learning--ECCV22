@@ -101,9 +101,12 @@ Please cite this paper in your publications if it is helpful for your tasks:
 
 Bibtex:
 ```
-@inproceedings{,
-  title={},
-  author={},
-  booktitle={},
+@article{chen2022rvsl,
+  title={RVSL: Robust Vehicle Similarity Learning in Real Hazy Scenes Based on Semi-supervised Learning},
+  author={Chen, Wei-Ting and Chen, I and Yeh, Chih-Yuan and Yang, Hao-Hsiang and Chang, Hua-En and Ding, Jian-Jiun and Kuo, Sy-Yen and others},
+  booktitle={European Conference on Computer Vision},
+  year={2022},
+  organization={Springer}
 }
+
 ```
