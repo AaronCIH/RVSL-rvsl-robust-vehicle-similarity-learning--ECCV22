@@ -3,6 +3,7 @@ This is official implentation of the paper:
 "RVSL: Robust Vehicle Similarity Learning in Real Hazy Scenes Based on Semi-supervised Learning"
 
 The ECCV paper has published in main conference on Oct.23~27: https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136740415.pdf
+
 The poster can refer to https://drive.google.com/file/d/1z_NIdxsLdxTfp9qTM4R1tPjnuOcq_7mG/view?usp=share_link
 
 ## 1. Abstract:
